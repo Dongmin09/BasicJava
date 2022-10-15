@@ -1,0 +1,20 @@
+---07-19
+
+
+Java Archive --> Jar
+
+Web Application Archive --> War
+
+Tape Archiver  --> Tar
+
+
+
+Build Tools
+Ant
+Build + Dependancy tools
+Maven (현장)
+Gradle(
+
+
+
+명령프롬프트 ->   dir -> java -jar (이름).jar  엔터하면 실행됨8

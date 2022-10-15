@@ -1,0 +1,79 @@
+1장 이클립스
+
+초기 설정
+Preferences -> wokrspace
+설정 UTF-8 
+
+java-> installed jres 현재프로그램 설정에 맞게 (1.8설치의 경우 1.8로 버젼맞춤)
+-----------------------
+환경변수를 패스 설정하는 이유
+자바 설치 경로의 프로그램을 빠르게 실행시키기 위해 (경로스킵)
+
+2장 변수와 타입
+변수 : 값을 저장한다.
+변수를 사용하기위해서는 변수 선언이 필요하다.
+변수는 선언과 초기화를 알아야 사용할 수 있다.
+
+중요!---변수 초기화 : 변수에 최초의 값이 저장될때. 메모리에 변수가 생성됨.
+중요!---변수는 초기화가 되어있지않으면 사용할 수 없다.
+
+변수의 이름 설정
+1. 첫 번째 글자는 문자이거나 '$', '_' 이어야 하고 숫자로 시작 할 수 없다.
+2. 영어 대소문자를 구분한다
+중요. 3. 첫 문자는 영어 소문자로 시작하되, 다른 단어가 붙을경우 첫문자를 대문자로한다.(관례).
+ex) maxSpeed, firstName, carBodyColor 언더바를 쓰지않을 것.
+
+이클립스 만들때 New 를 누른 후 class 를 누르면 새 프로젝트가 만들어짐
+
+
+
+package 챕터2;
+
+
+public class chapter02 { 
+	// 컨트롤 + 스페이스 m => 
+	public static void main(String[] args) { 
+		
+		
+		int hour = 12;
+		int minute = 11;
+		
+		System.out.println(hour + " 시간"+ minute + " 분");
+		int totalMinute = hour * 60 + minute;
+		System.out.println(totalMinute + " 분");
+		
+		
+		
+	}
+}
+
+
+package 챕터2;
+
+public class VariableExchangeExample {
+	public static void main(String[] args) {
+		
+		int x = 3;  // 로컬 변수 x
+		int y = 5;  
+		System.out.println("x:" + x + ", y :"+ y);
+		
+		int temp;  
+		temp = x;
+		x = y;
+		y = temp;
+		System.out.println("x:" + x + ", y :"+ y);
+	}
+
+}
+
+
+
+
+--로컬 변수 
+ 메소드 블록 내에서 선언된 변수를 로컬 변수라고 함
+---변수 : 값을 저장할 수 있는 메모리 번지에 붙인 이름. 변수를 통해 프로그램은 메모리 번지에 값을 저장하고 읽을 수 있다.
+---변수 선언 : 변수에 어떤 타입의 데이터를 저장할지 그리고 변수 이름이 무엇인지를 결정하는 것 (이후에 초기화가 필요함)
+
+---변수 사용 범위 : 변수는 자신이 선언된 위치에서 자신이 속한 블록 내부까지만 사용이 가능하고 밖에서는 사용할 수 없다.
+
+	 

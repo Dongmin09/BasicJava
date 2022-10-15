@@ -1,0 +1,156 @@
+타입 변환
+
+-자동 타입 변환
+-강제 타입 변환
+
+-정수 연산에서의 자동 타입 변환
+
+3. 실수 연산에서의 자동 타입 변환
+
+나누기를 사용할 때는 x / y를 이용하기위해서는 실수 타입의 연산을 사용하여야한다.
+
+4. + 연산에서의 문자열 자동 타입 변환
+
+1) + 연산 : 피연산자가 모수 숫자일 경우 덧셈 연산
+        만약 피연산자중 하나가 문자열일 경우 나머지 피연산자도 문자열로 자동변환되어 결합하여 연산
+	ex) int value = 3 + 7; => int value = 10;
+	 String str = "3" + 7;  -> String str = "3" + "7" -> String str = "37";
+	 String str = 3 + "7";  -> String str = "3" + "7" -> String str = "37";
+	 String str = 1+2 + "3"; -> String str = 3 + "3"; -> String str = "33";
+	 String str = 1 + "2" + 3; -> String str = "12" +3; -> String str = "123";
+	 String str = "1" + 2 + 3; -> String str = "12" +3; -> String str = "123"; 
+
+ 자바의 연산은 항상 왼쪽부터 순서대로 계산한다.
+
+- Integer.parselnt() : 문자열을 정수 int 타입으로 변환한다.
+- Double.parseDouble() : 문자열을 실수 double 타입으로 변환한다.
+
+
+02-4 변수와 시스템 입출력
+
+모니터로 변수값 출력하기
+System.in.read :// 한개씩 데이터를 받음. 불편하다 . System.in.read();
+
+Scanner :
+package 챕터2;
+
+import java.util.Scanner;
+
+public class example11 {
+public static void main(String[] args) {
+	
+	// Scanner를 이용해서 데이터 입력 받기
+	// 1번 문장 Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
+	 
+	//new Scan 까지 타이핑후 컨트롤 스페이스 -> import java.util.Scanner;
+	// 커서를 S부분쯤에서 컨트롤 +1 엔터를 하면 1번문장 완성
+	
+}
+}
+
+
+----------------------------------
+package 챕터2;
+
+import java.util.Scanner;
+
+public class example11 {
+public static void main(String[] args) {
+	// 한개씩 데이터를 받음. 불편하다 . System.in.read();
+	// Scanner를 이용해서 데이터 입력 받기
+	// 1번 문장 Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
+	 
+	//new Scan 까지 타이핑후 컨트롤 스페이스 -> import java.util.Scanner;
+	// 커서를 S부분쯤에서 컨트롤 +1 엔터를 하면 1번문장 완성
+	
+	int value1 = scanner.nextInt();
+	double value2 = scanner.nextDouble();
+	String next = scanner.next();
+	String nextLine = scanner.nextLine();
+	// 문자의 경우 넥스트라인
+	//scanner.next 에서 맞는 변수 누름 -> scanner.  r부분에서 컨트롤 1
+	System.out.println(value1);
+	System.out.println(value2);
+	
+	// next 를 입력하게 되면 결과값이 실시간으로 도출됨 console에
+}
+}
+
+
+----------------------------------------
+package 챕터2;
+
+import java.util.Scanner;
+
+public class ㅇㄹㅇㄹ {
+
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		// 입력
+		System.out.print("첫번째 수 :");
+		String strNum1 = scanner.nextLine();
+		System.out.print("두번째 수 :");
+		String strNum2 = scanner.nextLine();
+		// 처리
+		
+		int num1 = Integer.parseInt(strNum1);
+		int num2 = Integer.parseInt(strNum2);
+		int result = num1 + num2;
+		// 결과
+		System.out.println(result);
+		
+		
+	}
+
+}
+
+--------------------------------------------
+숙제  제출전 컨트롤 p -> 인쇄 -> pdf 저장 
+
+
+
+
+package 챕터2;
+
+import java.util.Scanner;
+
+public class Exercise21 {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("가로의 길이는? (단위 : m) :");
+		String a = scanner.nextLine();
+		System.out.print("세로의 길이는? (단위 : m) :");
+		String b = scanner.nextLine();
+	    
+		
+		double a1 = Double.parseDouble(a);
+		double a2 = Double.parseDouble(b);
+		
+		
+		
+		System.out.println("직사각형의 넓이 :" + (float)(a1*a2));
+	    System.out.println("직사각형의 둘레 :" + (float)(a1+a2));
+
+		// 다른 방법으로는 변수하나를 정의해서 넓이와 둘레 값을 따로 정의해서 표현하는 방법도 있다.
+	}		
+}
+
+
+
+
+
+
+
+
+
+
+웹개발 - 풀스텍 개발자. (자바스트립트 중요)
+앱 개발 - 자바가 중요
+
